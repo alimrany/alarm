@@ -50,11 +50,6 @@ html {
 label {
 	display:inline-block;
 }
-/* #sounds {
-    text-align: center;
-    padding-top: 20px;
-} */
-
 #setButton,#clearButton {
     background-color:rgb(228, 235, 228);
     margin-top:30px;

@@ -1,8 +1,6 @@
 var sound = document.getElementById('myAudio');
 sound.loop = true;
 var h2 = document.getElementById('clock');
-// var h3 = document.getElementById('myTime')
-// display current time by the second
 var currentTime = setInterval(function(){
 var date = new Date();
 var hours = (12 - (date.getHours()));
@@ -18,11 +16,6 @@ hours = hours;
 }
 h2.textContent = addZero(hours) + " : " + addZero(minutes) + " : " + addZero(seconds) + " " + ampm;
 },1000);
-
-/*functions to get hour, min, secs, 
-am or pm, add zero, set alarm time and sound, clear alarm
-*/
-
 function addZero(time) {
 return (time < 10) ? "0" + time : time;
 }
@@ -68,23 +61,14 @@ document.getElementById('alarmhrs').disabled = true;
 document.getElementById('alarmmins').disabled = true;
 document.getElementById('alarmsecs').disabled = true;
 document.getElementById('ampm').disabled = true;
-
-//when alarmtime is equal to currenttime then play a sound
 var h2 = document.getElementById('clock');
 var h3 = document.getElementById('myTime')
-/*function to calcutate the current time 
-then compare it to the alarmtime and play a sound when they are equal
-*/
-
 setInterval(function(){
 var date = new Date();
 var hours = (12 - (date.getHours()));
 var minutes = date.getMinutes();
 var seconds = date.getSeconds();
 var ampm = (date.getHours()) < 12 ? 'AM' : 'PM';
-
-//convert military time to standard time
-
 if (hours < 0) {
 hours = hours * -1;
 } else if (hours == 00) {
