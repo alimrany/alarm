@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alarm</title>
+    <link rel="stylesheet" href="./alarm.css">
+</head>
+<body>
+<main>
+    <div id='main-container'>
+        <h2 id='clock'></h2>
+        <h3 id="myTime"></h3>
+      </div>
+    
+      <div id='alarm-container'>
+        <h1>Alarm Time</h1>
+        <label>
+          <div>
+            <select id='alarmhrs'></select>
+          </div>Hr
+        </label>
+        <label>
+          <div>
+            <select id='alarmmins'></select>
+          </div>Min
+        </label>
+        <label>
+          <div>
+            <select id='alarmsecs'></select>
+          </div>Sec
+        </label>
+        <label>
+          <div>
+            <select id="ampm">
+              <option value="AM">AM</option>
+              <option value="PM">PM</option>
+            </select>
+          </div>A/P
+        </label>
+      </div>
+      </div>
+    
+      <div id='buttonHolder'>
+        <div>
+          <button id='setButton' onclick='alarmSet()'>Set</button>
+        </div>
+        <div>
+          <button id='clearButton' onclick='alarmClear()'>Stop</button>
+        </div>
+        
+      </div>
+<audio src="./audio/mixkit-spaceship-alarm-998.wav" id="myAudio"></audio>
+</main> 
+<script type='text/javascript' src='./alarm.js'></script>
+</body>
+</html>
